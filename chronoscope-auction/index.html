@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Хроноскоп судьбы · Аукцион</title><link rel="stylesheet" href="style.css?v=21"></head>
+<body><div id="auction"><header><div class="event-brand"><img class="event-logo" src="assets/event-logo.svg" alt="Хроноскоп судьбы"><h1>Аукцион<br>подарков</h1></div><div class="top-actions"><span class="draft">Черновик · шаг 3</span><details id="menu"><summary>Настройки</summary><div class="menu"><button id="undo">Отменить действие</button><button id="export">Скачать резервную копию</button><label class="import">Загрузить копию<input id="import" type="file" accept="application/json"></label><button id="refresh">Загрузить список из Google</button><button id="reset">Сбросить репетицию</button></div></details></div></header>
+<main><section class="stage"><div class="section-heading"><span class="rule"></span><h2 id="stage-title">Инвентарь подарков</h2><span class="rule"></span></div><div class="scene"><div id="countdown" hidden aria-live="assertive"></div><div id="celebration" hidden><div class="hammer"><i></i><b></b></div><strong>Продано!</strong><div id="confetti"></div></div><div id="inventory"><img class="board" src="assets/inventory.png" alt="Инвентарь из 15 подарков"><img id="lit" class="board lit" src="assets/inventory-lit.png" alt=""><div id="slots"></div></div><div id="focus" hidden><span class="eyebrow">Лот на торгах</span><img id="gift-image" alt=""><h2 id="gift-name"></h2><p>Ставки принимаются в чате Zoom</p></div></div><div class="controls"><p id="hint" aria-live="polite"></p><div class="action-bar"><div class="action-side"><button class="secondary" id="return" hidden>Вернуть лот</button></div><div class="action-main"><button class="primary" id="pick" disabled>Загрузка подарков…</button><div id="timer-controls" hidden><label id="duration-label">Отсчёт <select id="duration"><option value="5">5 секунд</option><option value="3">3 секунды</option></select></label><button class="primary" id="start">Начать отсчёт</button><div id="running-controls" hidden><button class="primary" id="stop">Остановить</button><button class="secondary" id="restart">Заново</button></div></div><button class="primary" id="next" hidden>К инвентарю</button></div><div class="action-side"><button class="secondary" id="dice">Бросить кубик</button><small>При равной ставке</small></div></div></div></section>
+<aside><div class="aside-title"><h2>Участники</h2><span id="count"></span></div><div class="list-head"><span>Имя игрока</span><span>Всего в тайнике</span></div><div id="people"></div><p class="aside-note">Отметьте тех, кто получил подарок.<br>Повторное нажатие отменяет отметку.</p><p id="source"></p></aside></main><div id="notice" role="status"></div></div><script id="initial-people" type="application/json">[
+  {
+    "name": "Феврония Лисьева",
+    "total": 54,
+    "done": false
+  },
+  {
+    "name": "Аглая Златорукова",
+    "total": 45,
+    "done": false
+  },
+  {
+    "name": "Гордей Пустоколчанов",
+    "total": 42,
+    "done": false
+  },
+  {
+    "name": "Марфа Хранительница",
+    "total": 21,
+    "done": false
+  }
+]</script><dialog id="dice-dialog" aria-labelledby="dice-title"><div class="dice-header"><div><span class="eyebrow">Равные ставки</span><h2 id="dice-title">Бросок судьбы</h2></div><button id="dice-close" class="secondary">Закрыть</button></div><p id="dice-help">По одному броску для каждого участника. Большее число побеждает.</p><div class="dice-players"><section><label>Первый участник<input id="dice-name-0" list="dice-names" placeholder="Имя участника" maxlength="100"></label><div class="dice-animation" id="dice-animation-0"></div><output id="dice-result-0">—</output></section><section><label>Второй участник<input id="dice-name-1" list="dice-names" placeholder="Имя участника" maxlength="100"></label><div class="dice-animation" id="dice-animation-1"></div><output id="dice-result-1">—</output></section></div><datalist id="dice-names"></datalist><p id="dice-verdict" aria-live="polite"></p><div class="dice-buttons"><button id="dice-roll" class="primary">Бросить за первого</button><button id="dice-new" class="secondary">Новый раунд</button></div><p id="dice-loading"></p></dialog><script src="app.js?v=20"></script><script src="vendor/lottie.min.js"></script><script src="dice.js?v=5"></script><script src="typography.js?v=3"></script></body></html>
