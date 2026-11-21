@@ -3,7 +3,7 @@
 const $=id=>document.getElementById(id), KEY='chronoscope-auction-draft-v1';
 const gifts=[
  ['glasses','Умные очки Meta Ray-Ban',0,0,3,1],['travel','Сертификат Яндекс Путешествия · 25 000 ₽',3,0,1,2],['mug','Термокружка BORK',4,0,1,1],['headphones','Беспроводные наушники HUAWEI FreeClip 2',5,0,2,2],
- ['apple','Сертификат Золотое яблоко · 10 000 ₽',0,1,1,1],['rolls','Сет роллов',1,1,1,1],['amed','Яндекс Плюс с Амедиатекой · на год',2,1,1,1],['afisha','Яндекс Афиша · 10 000 ₽',4,1,1,1],
+ ['apple','Сертификат Золотое яблоко · 10 000 ₽',0,1,1,1],['rolls','Сeт роллов',1,1,1,1],['amed','Яндекс Плюс с Амедиатекой · на год',2,1,1,1],['afisha','Яндекс Афиша · 10 000 ₽',4,1,1,1],
  ['dinner','Ужин',0,2,1,1],['grill','Аэрогриль Braun',1,2,1,1],['printer','Фото-принтер (мини)',2,2,1,1],['telegram','Telegram Premium · на год',3,2,1,1],['massage','Перкуссионный мини-массажёр',4,2,1,1],['apple','Сертификат Золотое яблоко · 5 000 ₽',5,2,1,1],['brush','Электрическая зубная щетка\nOral-B Pro Series 3',6,2,1,1]
 ].map(([asset,name,x,y,w,h],id)=>({id,asset,name,x:155+x*381,y:190+y*384,w:w*381,h:h*384}));
 let state={version:1,selected:null,people:[],source:'',savedAt:null,sold:[]},history=[],rolling=false,ready=false;
